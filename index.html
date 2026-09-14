@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>535250110</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1> Expense Tracker</h1>
+            <p>Kelola keuangan harianmu dengan lebih mudah</p>
+        </header>
+
+        <!-- Ringkasan / Summary -->
+        <div class="summary-cards">
+            <div class="card">
+                <h3>Total Transaksi</h3>
+                <p id="total-count">0</p>
+            </div>
+            <div class="card">
+                <h3>Total Pengeluaran</h3>
+                <p id="total-amount">Rp 0</p>
+            </div>
+        </div>
+
+        <!-- Form Input -->
+        <form id="expense-form">
+            <div class="input-group">
+                <input type="text" id="description" placeholder="Nama / Keterangan Pengeluaran" required>
+            </div>
+            <div class="input-group">
+                <input type="number" id="amount" placeholder="Nominal (Rp)" required>
+            </div>
+            <div class="input-group">
+                <select id="category" required>
+                    <option value="" disabled selected>Pilih Kategori</option>
+                    <option value="Makanan"> Makanan & Minuman</option>
+                    <option value="Transportasi"> Transportasi</option>
+                    <option value="Belanja"> Belanja</option>
+                    <option value="Hiburan"> Hiburan</option>
+                    <option value="Lainnya"> Lainnya</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-add">+ Tambah Pengeluaran</button>
+        </form>
+
+        <!-- Daftar Pengeluaran -->
+        <div class="expense-container">
+            <h2>Riwayat Pengeluaran</h2>
+            <ul id="expense-list">
+                <!-- Data akan dimasukkan lewat JavaScript secara dinamis -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
